@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-app';
+  title:string='this is my title';
+  constructor(){}
+  ngOnInit():void{}
+  firstName="poonguzhali";
+  imagepath="assets/images.jpeg";
+  defaultvalue="poonguzhali";
+  changeValue(e:any){
+    console.log(e.target.value);
+  }
+  onClick(){
+    console.log('welcome to angular tutorial')
+  }
+ 
 }
