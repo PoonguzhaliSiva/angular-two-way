@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router';
+import { HelloComponent, HiComponent, TestComponent } from './hello.component';
+import { routes } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,HelloComponent,HiComponent,TestComponent,
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
+    
+   
+    RouterModule.forRoot(routes),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
